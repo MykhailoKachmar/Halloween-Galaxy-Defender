@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainscreen"
+    android:layout_gravity="center"
+    android:padding="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/Exit_Button"
+            style="@style/Theme.AppCompat.Light.NoActionBar"
+            android:layout_width="173dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#6200ED"
+            android:fontFamily="@font/beattech"
+            android:onClick="exit"
+            android:text="Close"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#332067"
+            android:textColorHighlight="@android:color/black"
+            android:textColorHint="@color/black"
+            android:textSize="30sp">
+
+
+        </Button>
+
+        <View
+            android:layout_width="59dp"
+            android:layout_height="59dp"
+            android:layout_weight="1"/>
+
+
+
+        <Button
+            android:id="@+id/Restart_Button"
+            style="@style/Theme.AppCompat.Light.NoActionBar"
+            android:layout_width="173dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#6200ED"
+            android:fontFamily="@font/beattech"
+            android:onClick="restart"
+            android:text="Restart"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#332067"
+            android:textColorHighlight="@android:color/black"
+            android:textColorHint="@color/black"
+            android:textSize="30sp">
+
+        </Button>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="10dp"
+        android:id="@+id/TODO">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Score: "
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/tvPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="50sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/winner_tx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="WINNER!!!"
+            android:textColor="@android:color/holo_orange_light"
+            android:gravity="center"
+            android:textSize="45sp"
+            android:visibility="gone"/>
+
+
+        <ImageView
+            android:id="@+id/winner_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/win"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="33dp"
+            tools:layout_editor_absoluteY="301dp"
+            android:visibility="gone">
+
+
+        </ImageView>
+
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>

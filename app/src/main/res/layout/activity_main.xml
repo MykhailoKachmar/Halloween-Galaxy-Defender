@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:gravity="center"
+android:id="@+id/main"
+tools:context=".MainActivity"
+android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mainscreen">
+
+
+    </ImageView>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/activity_main_xml_constraintlayout_scene"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/text_start_screen"
+            android:layout_width="336dp"
+            android:layout_height="146dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="100dp"
+            android:autoSizeMaxTextSize="200sp"
+            android:autoSizeMinTextSize="50sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/beattech"
+            android:gravity="center"
+            android:shadowColor="@color/black"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="5"
+            android:text="halloween galaxy defender"
+            android:textAlignment="gravity"
+            android:textColor="@color/design_default_color_primary"
+            android:textLocale="@string/app_name"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toTopOf="@+id/Start_Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.223"
+            tools:ignore="HardcodedText,MissingConstraints">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/Exit_Button"
+            style="@style/Theme.AppCompat.Light.NoActionBar"
+            android:layout_width="281dp"
+            android:layout_height="75dp"
+            android:layout_marginBottom="120dp"
+            android:backgroundTint="#6200ED"
+            android:fontFamily="@font/beattech"
+            android:onClick="restartGame"
+            android:text="Exit"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#332067"
+            android:textColorHighlight="@android:color/black"
+            android:textColorHint="@color/black"
+            android:textSize="48sp"
+            app:icon="@android:drawable/ic_delete"
+            app:iconPadding="0dp"
+            app:iconSize="60dp"
+            app:iconTint="#754BEA"
+            app:iconTintMode="multiply"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Start_Button"
+            app:rippleColor="@color/material_dynamic_neutral30">
+
+
+        </Button>
+
+        <Button
+            android:id="@+id/Start_Button"
+            style="@style/Theme.AppCompat.Light.NoActionBar"
+            android:layout_width="281dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#6200ED"
+            android:fontFamily="@font/beattech"
+            android:onClick="startGame"
+            android:text="Start"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#332067"
+            android:textColorHighlight="@android:color/black"
+            android:textColorHint="@color/black"
+            android:textSize="48sp"
+            app:icon="@android:drawable/ic_media_play"
+            app:iconPadding="0dp"
+            app:iconSize="60dp"
+            app:iconTint="#754BEA"
+            app:iconTintMode="multiply"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:rippleColor="@color/material_dynamic_neutral30"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="300dp">
+
+
+        </Button>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+
+</RelativeLayout>
+
+
